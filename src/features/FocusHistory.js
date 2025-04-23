@@ -14,7 +14,7 @@ export const FocusHistory = ({ history, clearHistory }) => {
     );
   }
 
-  const renderItem = ({ item }) => <Text style={styles.item}>- {item}</Text>;
+  const renderItem = ({ item }) => <Text style={styles.item}>• {item}</Text>;
 
   return (
     <View style={styles.container}>
@@ -38,13 +38,13 @@ const styles = StyleSheet.create({
   item: {
     fontSize: fontSizes.md,
     color: colors.white,
-    paddingTop: spacing.xxxl,
+    paddingTop: spacing.xxl,
     paddingLeft: spacing.lg,
   },
   title: {
     color: colors.white,
-    fontSize: fontSizes.lg,
-    paddingTop: spacing.xxl,
+    fontSize: fontSizes.xxl,
+    paddingTop: spacing.xxxl,
     fontWeight: "bold",
   },
   emptyContainer: {
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   emptyText: {
-    fontSize: fontSizes.md,
+    fontSize: fontSizes.xl,
     color: colors.white,
     textAlign: "center",
   },

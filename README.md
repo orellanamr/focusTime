@@ -16,16 +16,14 @@ FocusTime es una aplicación móvil basada en la técnica **Pomodoro**, diseñad
 
 ## 📸 Capturas de pantalla
 
-### Pantalla principal
-![FocusTime - Pantalla principal](./assets/screenshots/focus_main.png)
+### Mockup App
+![FocusTimeApp](./assets/FocusTimeApp.png)
 
 ### Temporizador
-![FocusTime - Temporizador](./assets/screenshots/focus_timer.png)
+![FocusTime - Temporizador](./assets/FocusTime_Timer.png)
 
 ### Historial
-![FocusTime - Historial](./assets/screenshots/focus_history.png)
-
-*(Asegúrate de agregar las capturas de pantalla en la carpeta `assets/screenshots` y ajustar las rutas si es necesario.)*
+![FocusTime - Historial](./assets/FocusTime_History.png)
 
 ---
 
@@ -51,7 +49,7 @@ Sigue estos pasos para ejecutar el proyecto en tu máquina local:
 
 1. Clona este repositorio:
    ```bash
-   git clone https://github.com/tu-usuario/focustime.git
+   git clone https://github.com/orellanamr/focusTime.git
    cd focustime
 
 2. Instala las dependencias:

@@ -4,17 +4,19 @@ import { TextInput } from "react-native-paper";
 import { colors } from "../utils/colors";
 import { RoundedButton } from "../components/RoundedButton";
 import { spacing } from "../utils/sizes";
+import { Snackbar } from "react-native-paper";
 
 export const Focus = ({ addSubject }) => {
   const [subject, setSubject] = useState(null);
   const [error, setError] = useState(false);
+  const [snackbarVisible, setSnackbarVisible] = useState(false);
 
   const handleAddSubject = () => {
     if (!subject) {
-      setError(true);
+      setSnackbarVisible(true);
       return;
     }
-    setError(false);
+    setSnackbarVisible(false);
     addSubject(subject);
   };
 
@@ -38,7 +40,17 @@ export const Focus = ({ addSubject }) => {
             },
           }}
         />
-        {error && <Text style={styles.errorText}>Please enter a subject!</Text>}
+        <Snackbar
+          visible={snackbarVisible}
+          onDismiss={() => setSnackbarVisible(false)}
+          duration={3000}
+          action={{
+            label: "OK",
+            onPress: () => setSnackbarVisible(false),
+          }}
+        >
+          Please enter a subject!
+        </Snackbar>
         <View style={styles.button}>
           <RoundedButton
             title="+"
